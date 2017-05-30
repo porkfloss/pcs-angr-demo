@@ -3,7 +3,5 @@ This repo contains the slides and code used for the presentation of symbolic exe
 
 # Group Members
 Petur Andrias Højgaard Jacobsen
-
 Andrew Tristan Parli
-
 Robert Schannong Rasmussen
