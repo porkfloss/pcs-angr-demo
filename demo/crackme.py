@@ -80,7 +80,13 @@ def get_possible_flags():
     # brute force the combinations.
     possible_values = [ s.se.any_n_str(s.memory.load(0x6C4B20 + i, 2), 65536) for i in range(0, 8, 2) ]
 
-    print(possible_values)
+    # Now we show the 4 groups of possible values
+    # Later we will create all the combinations to find a correct value by bruteforce
+    # Now this approach is more acceptable since we have reduced the keyspace.
+    print "Printing possible values"
+    print "...solved 2 bytes at a time, so there are {} groups of values".format(len(possible_values))
+    for group in possible_values:
+        print(group)
 
     possibilities = tuple(itertools.product(*possible_values))
     return possibilities
